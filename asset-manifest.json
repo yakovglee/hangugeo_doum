@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hangugeo_doum/static/css/main.a93cc1a5.css",
+    "main.js": "/hangugeo_doum/static/js/main.73d01db5.js",
+    "static/js/453.7c6f10c9.chunk.js": "/hangugeo_doum/static/js/453.7c6f10c9.chunk.js",
+    "index.html": "/hangugeo_doum/index.html",
+    "main.a93cc1a5.css.map": "/hangugeo_doum/static/css/main.a93cc1a5.css.map",
+    "main.73d01db5.js.map": "/hangugeo_doum/static/js/main.73d01db5.js.map",
+    "453.7c6f10c9.chunk.js.map": "/hangugeo_doum/static/js/453.7c6f10c9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a93cc1a5.css",
+    "static/js/main.73d01db5.js"
+  ]
+}
