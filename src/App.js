@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import FlipCard from "./components/FlipCard";
+
+import { data } from "./data";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="flex flex-wrap justify-center mt-10">
+            {data.map((entry) => (
+                <FlipCard
+                    key={entry.id}
+                    chapter_name={entry.chapter_name}
+                    translation={entry.translation}
+                />
+            ))}
+        </div>
+    );
 }
 
 export default App;
