@@ -1,18 +1,25 @@
+import { useState } from "react";
+
 import FlipCard from "./components/FlipCard";
 
 import { data } from "./data";
 
 function App() {
+
     return (
-        <div className="flex flex-wrap justify-center mt-10">
-            {data.map((entry) => (
-                <FlipCard
-                    key={entry.id}
-                    chapter_name={entry.chapter_name}
-                    translation={entry.translation}
-                />
-            ))}
+
+        <div className="flex flex-wrap gap-6 p-6">
+            <FlipCard  />
+            <FlipCard />
+            <FlipCard />
+            <FlipCard />
+            <FlipCard  />
+            <FlipCard />
+            <FlipCard />
+            <FlipCard />
+
         </div>
+            
     );
 }
 
