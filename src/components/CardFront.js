@@ -1,8 +1,5 @@
-import Card from './shr/Card';
+import Card from "./shr/Card";
 
 export default function CardFront() {
-
-    return (
-      <Card> FRONT </Card>
-    );
+    return <Card> FRONT </Card>;
 }
