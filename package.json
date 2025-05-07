@@ -4,6 +4,7 @@
   "homepage": "https://yakovglee.github.io/hangugeo_doum",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^6.0.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
