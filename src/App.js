@@ -23,22 +23,9 @@ function App() {
                         wrap
                         gap="middle"
                     >
-                        <FlipCard />
-                        <FlipCard />
-                        <FlipCard />
-                        <FlipCard />
-                        <FlipCard />
-                        <FlipCard />
-                        <FlipCard />
-                        <FlipCard />
-                        <FlipCard />
-                        <FlipCard />
-                        <FlipCard />
-                        <FlipCard />
-                        <FlipCard />
-                        <FlipCard />
-                        <FlipCard />
-                        <FlipCard />
+                        {data.map((item, index) => (
+                            <FlipCard key={index} data={item} />
+                        ))}
                     </Flex>
                 </Content>
             </Layout>

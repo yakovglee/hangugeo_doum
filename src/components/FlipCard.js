@@ -2,7 +2,7 @@ import { useState } from "react";
 import CardFront from "./CardFront";
 import CardBack from "./CardBack";
 
-function FlipCard() {
+function FlipCard({ data }) {
     const [flipped, setFlipped] = useState(false);
 
     return (
@@ -17,10 +17,16 @@ function FlipCard() {
                     }`}
                 >
                     <div className="absolute w-full h-full backface-hidden">
-                        <CardFront />
+                        <CardFront
+                            chapter_name={data.chapter_name}
+                            quizlet_link={data.quizlet_link}
+                        />
                     </div>
-                    <div className="absolute w-full h-full backface-hidden rotate-y-180">
-                        <CardBack />
+                    <div className="absolute w-full h-full backface-hidden rotate-y-180 ">
+                        <CardBack
+                            chapter_translation={data.chapter_translation}
+                            translation={data.translation}
+                        />
                     </div>
                 </div>
             </div>
