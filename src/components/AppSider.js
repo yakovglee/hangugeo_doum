@@ -1,11 +1,6 @@
 import { Layout, Menu } from "antd";
 
-const items = [1, 2, 3, 4].map((icon, index) => ({
-    key: String(index + 1),
-    label: `nav ${index + 1}`,
-}));
-
-function AppSider({ collapsed }) {
+function AppSider({ collapsed, selectedItem, handleSelect, items }) {
     return (
         <Layout.Sider
             breakpoint="lg"
@@ -28,8 +23,9 @@ function AppSider({ collapsed }) {
             <Menu
                 theme="light"
                 mode="inline"
-                defaultSelectedKeys={["1"]}
+                defaultSelectedKeys={[selectedItem]}
                 items={items}
+                onSelect={handleSelect}
             />
         </Layout.Sider>
     );

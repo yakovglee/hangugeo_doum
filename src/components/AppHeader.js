@@ -1,8 +1,8 @@
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 
-import { Button, Layout } from "antd";
+import { Button, Layout, Typography } from "antd";
 
-function AppHeader({ collapsed, setCollapsed }) {
+function AppHeader({ collapsed, setCollapsed, title }) {
     return (
         <Layout.Header
             style={{
@@ -26,6 +26,14 @@ function AppHeader({ collapsed, setCollapsed }) {
                     height: 64,
                 }}
             />
+            <Typography.Title
+                style={{
+                    margin: 0,
+                }}
+                level={4}
+            >
+                {title}
+            </Typography.Title>
         </Layout.Header>
     );
 }
