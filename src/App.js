@@ -51,7 +51,7 @@ function App() {
                         wrap
                         gap="middle"
                     >
-                        {data.map((item, index) => (
+                        {data.filter(item => item.book === selectedKey).map((item, index) => (
                             <FlipCard key={index} data={item} />
                         ))}
                     </Flex>
