@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/hangugeo_doum/static/css/main.e6e5a464.css",
-    "main.js": "/hangugeo_doum/static/js/main.8f9f8801.js",
+    "main.css": "/hangugeo_doum/static/css/main.5accb903.css",
+    "main.js": "/hangugeo_doum/static/js/main.77407c83.js",
     "static/js/453.7c6f10c9.chunk.js": "/hangugeo_doum/static/js/453.7c6f10c9.chunk.js",
+    "static/media/logo512.png": "/hangugeo_doum/static/media/logo512.67c60a848e49eabde4a5.png",
     "index.html": "/hangugeo_doum/index.html",
-    "main.e6e5a464.css.map": "/hangugeo_doum/static/css/main.e6e5a464.css.map",
-    "main.8f9f8801.js.map": "/hangugeo_doum/static/js/main.8f9f8801.js.map",
+    "main.5accb903.css.map": "/hangugeo_doum/static/css/main.5accb903.css.map",
+    "main.77407c83.js.map": "/hangugeo_doum/static/js/main.77407c83.js.map",
     "453.7c6f10c9.chunk.js.map": "/hangugeo_doum/static/js/453.7c6f10c9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6e5a464.css",
-    "static/js/main.8f9f8801.js"
+    "static/css/main.5accb903.css",
+    "static/js/main.77407c83.js"
   ]
 }
