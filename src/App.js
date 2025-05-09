@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 
 import AppSider from "./components/AppSider";
 import FlipCard from "./components/FlipCard";
+import AppHeader from "./components/AppHeader";
+import CustomIcon from "./components/CustomIcon";
 
 import { itemsMenu } from "./data";
 
-import { Layout, Flex } from "antd";
-import AppHeader from "./components/AppHeader";
+import { Layout, Flex, Spin, Alert } from "antd";
+
 const { Content } = Layout;
 
 function App() {
@@ -18,7 +20,8 @@ function App() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    const webAppUrl = "https://script.google.com/macros/s/AKfycbygxUSpYtAFnfZzROwXEGLViz3drbOzy2ss_j6xlwz_TDmnyPk8SQjIF3wbL4QY37a4/exec";
+    const webAppUrl =
+        "https://script.google.com/macros/s/AKfycbygxUSpYtAFnfZzROwXEGLViz3drbOzy2ss_j6xlwz_TDmnyPk8SQjIF3wbL4QY37a4/exec";
 
     function handleSelect(item) {
         setselectedKey(item.key);
@@ -28,8 +31,6 @@ function App() {
         const fetchData = async () => {
             try {
                 const response = await fetch(webAppUrl);
-
-                console.log(webAppUrl);
 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -47,11 +48,26 @@ function App() {
     }, [webAppUrl]);
 
     if (loading) {
-        return <div>Loading data...</div>;
+        return (
+            <Spin
+                indicator={<CustomIcon spin />}
+                size="large"
+                tip="Загрузка данных"
+                fullscreen
+            />
+        );
     }
 
     if (error) {
-        return <div>Error: {error.message}</div>;
+        return (
+            <Spin tip="Loading...">
+                <Alert
+                    message="Ошибка"
+                    description={error.message}
+                    type="error"
+                />
+            </Spin>
+        );
     }
 
     return (
